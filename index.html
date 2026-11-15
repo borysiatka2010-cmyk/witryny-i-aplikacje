@@ -1,124 +1,243 @@
-<!DOCTYPE html> 
-<html lang="pl-PL"> 
-<html> 
-     <head> 
-             <meta charset="utf-8"> 
-             <title> Borys 2f  </title> 
-     </head> 
-    <body> 
+<!DOCTYPE HTML><html lang="pl-PL"><head>    <meta charset="utf-8">    <title>Borys Kozowski</title>    <style>        body {            margin: 0;            padding: 20px 40px;            font-family: "Times New Roman", serif;            background: white;            color: #000;
+        }                /* Styl nawigacji */        .katalog-nawigacja {            margin-bottom: 20px;            font-family: Arial, sans-serif;            font-size: 14px;            background: #f9f9f9;            padding: 10px 15px;            border: 1px solid #ddd;            border-radius: 4px;        }        .katalog-nawigacja ul {            list-style-type: disc;            padding-left: 20px;            margin: 5px 0 0 0;        }        .katalog-nawigacja li {            margin-bottom: 3px;        }        .katalog-nawigacja a {            color: blue;            text-decoration: underline;            cursor: pointer;        }
 
+        .sekcja-gora {            margin-bottom: 30px;            line-height: 1.6;        }
 
+        /* Pierwsza ramka – szare tło, standardowy tekst */
+        .sekcja-szara {
+            width: 800px;
+            max-width: 100%;
+            margin: 20px auto;
+            padding: 25px;
+            background: #c0c0c0;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+        }
 
-<a name="skok_poczatek"></a> 
- <p align="right"> <font color="green" size="7" face="Arial"> Borys </font> </p> <br> 
- <p align="right"> <font color="green" size="6" face="Arial"> Borys </font> </p> <br> 
- <p align="right"> <font color="green" size="5" face="Arial"> Borys </font> </p> <br> 
- <p align="right"> <font color="green" size="4" face="Arial"> Borys </font> </p> <br> 
- <p align="right"> <font color="green" size="3" face="Arial"> Borys </font> </p> <br> 
- <p align="right"> <font color="green" size="2" face="Arial"> Borys </font> </p> <br> 
- <p align="right"> <font color="green" size="1" face="Arial"> Borys </font> </p> <br> 
+        /* Druga ramka – szare tło, jaskrawo-niebieski tekst */
+        .sekcja-jaskrawa {
+            width: 800px;
+            max-width: 100%;
+            margin: 20px auto;
+            padding: 25px;
+            background: #c0c0c0;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #00ffff;
+        }
 
-<h6>  Kozłowski </h6><br> 
-<h5>  Kozłowski </h5><br>
-<h4>  Kozłowski </h4><br>
-<h3>  Kozłowski </h3><br>
-<h2>  Kozłowski </h2><br>
-<h1>  Kozłowski </h1><br>
+        .sekcja-jaskrawa h3 {
+            color: #00ffff;
+        }
 
+        .ramka {            position: relative;            width: 100%;            height: 265px;            margin-bottom: 25px;            background: #c0c0c0;            border: 1px solid black;            box-sizing: border-box;            padding: 45px 10px 20px 10px;        }
+        .tytul {            position: absolute;            top: 48px;            left: 10px;            font-size: 25px;            font-weight: bold;        }
+        .srodek {            left: 50%;            transform: translateX(-50%);        }
+        .prawa {            left: auto;            right: 10px;        }
+        .tresc {            position: absolute;            top: 128px;            left: 10px;            right: 10px;            border: 1px solid #999;            padding: 10px;            font-size: 14px;            line-height: 1.4;            box-sizing: border-box;            background: white;        }
+        
+        .pasek1 {            position: absolute;            bottom: 15px;            right: 30px;            width: 40%;            height: 8px;            background: purple;            border-radius: 4px;        }
+        .pasek2 {            position: absolute;            bottom: 20px;            left: 30px;            width: 50%;            height: 8px;            background: gold;            border-radius: 4px;        }
+        .pasek3 {            position: absolute;            bottom: 25px;            left: 25%;            width: 50%;            height: 8px;            background: cyan;            border-radius: 4px;        }
 
-<A HREF="poczta_kozlowski.html"> Tutaj jest link do poczty<font color="black" size="5" face="Arial"> </A><br>
-<A HREF="plik_kozlowski.html"> Tutaj jest link do pliku <font color="black" size="5" face="Arial"></A><br>
-<A HREF="tabela_kozlowski.html"> Tutaj jest link do tabeli <font color="black" size="5" face="Arial"></A><br>
-<A HREF="formularz_kozlowwski.html"> Tutaj jest link do formuarz<font color="black" size="5" face="Arial"> </A><br>
-<a href="#skok_srodek_kozlowski">kliknij aby skoczyc do srodka tekstu</a> <br>
-<a href="#skok_koniec_kozlowski">kliknij aby skoczyc na koniec tekstu</a> <br>
+        .dane {            position: absolute;            left: 10px;            bottom: 22px;            font-size: 14px;        }
+        .dane div {            display: inline-block;            margin-right: 35px;        }
+    </style>
+</head><body>
 
+    <!-- ================= GÓRA ================= -->
+    <div id="gora"></div>
+    <div class="katalog-nawigacja">        
+        góra strony:<br>
+        <ul> 
+	    <li><a href="kozlowski_walidacja.html">Link do walidacji</a></li>             
+            <li><a href="poczta.html">Link do poczty</a></li>            
+            <li><a href="plik.html">Link do ściągania pliku</a></li>                      
+            <li><a href="kozlowski_tabela.html">Link do strony zawierającej tabelę</a></li>            
+            <li><a href="kozlowski_formulaz.html">Link do strony zawierającej formularz</a></li>   
+	    <li><a href="#srodek">Link do środka tekstu</a></li> 
+	    <li><a href="#dol">Link do końca tekstu</a></li> 	     
+        </ul>    </div>
 
-<p align="right"> <font color="grey" size="1" face="Arial"> :| - Brak emocji </font> </p> <br>
+    <hr>
 
-<p align="right"> <font color="purple " size="2" face="Arial"> :P pokazanie języka  </font> </p> <br>
+    <div class="sekcja-gora">
+        <p align="right"> <font color="purple" size="7" face="Arial"> Borys </font> </p>      
+        <p align="right"> <font color="purple" size="6" face="Arial"> Borys </font> </p>      
+        <p align="right"> <font color="purple" size="5" face="Arial"> Borys </font> </p>      
+        <p align="right"> <font color="purple" size="4" face="Arial"> Borys </font> </p>      
+        <p align="right"> <font color="purple" size="3" face="Arial"> Borys </font> </p>      
+        <p align="right"> <font color="purple" size="2" face="Arial"> Borys </font> </p>      
+        <p align="right"> <font color="purple" size="1" face="Arial"> Borys </font> </p> 
 
-<p align="right"> <font color="silver" size="4" face="Arial"> ;) - puszczanie oczka </font> </p> <br>
+        <h6> Kozłowski </h6>
+        <h5> Kozłowski </h5>
+        <h4> Kozłowski </h4>
+        <h3> Kozłowski </h3>
+        <h2> Kozłowski </h2>
+        <h1> Kozłowski </h1>
 
-<p align="right"> <font color="purple" size="5" face="Courier New"> :O - Zdziwienie </font> </p> <br>
+        <p align="right"> <font color="blue" size="1" face="Arial"> :| - Brak emocji</font> </p>    
+        <p align="right"> <font color="gray" size="2" face="Arial"> :P pokazanie języka </font> </p>    
+        <p align="right"> <font color="gold" size="4" face="Arial"> ;) - puszczanie oczka  </font> </p>    
+        <p align="right"> <font color="red" size="5" face="Courier New">  :O - Zdziwienie </font> </p>        
+  	<p align="right"> <font color="green" size="5" face="Courier New"> :P - ignorowanie   </font> </p>   
+	<p align="right"> <font color="purple" size="5" face="Courier New">  :) - Zadowolenie   </font> </p>   
+     
 
-<p align="right"> <font color="maroon" size="6" face="Times New Roman"> :P - ignorowanie </font> </p> <br>
+    </div>
 
-<p align="right"> <font color="blue" size="7" face=Verdana> :) - Zadowolenie </font> </p> <br>
+    <!-- ================= ŚRODEK ================= -->
+    <div id="srodek"></div>
+    <div class="katalog-nawigacja">        
+        środek strony<br>
+        <ul>            
+            <li><a href="kozlowski_walidacja.html">Link do walidacji</a></li>             
+            <li><a href="poczta.html">Link do poczty</a></li>            
+            <li><a href="plik.html">Link do ściągania pliku</a></li>                      
+            <li><a href="kozlowski_tabela.html">Link do strony zawierającej tabelę</a></li>            
+            <li><a href="kozlowski_formulaz.html">Link do strony zawierającej formularz</a></li> 
+	    <li><a href="#gora">Link początek tekstu</a></li>            
+            <li><a href="#dol">Link do końca tekstu</a></li>      
+        </ul>    </div>
 
+        <div class="ramka">
+        <div class="tytul srodek"> Żart o kostce lodu </div>
+        <div class="tresc">             
+            <b>-Zosiu, co tak długo robisz w kuchni?</b><br><br>
+           -Wpadła mi kostka lodu do wrzątku i nie mogę jej  znaleźć. <br>
+        </div>
+        <div class="pasek1"></div>
+    </div>
 
-<p align="left"> <font color="black" size="3" face="Arial"><b> 80-283</b><i>,Gdańsk</i><u>,warnenka</u><strike>101/34 </strike> </font> </p> <br>
+    <div class="ramka">
+        <div class="tytul srodek"> żart o babie u lekarza </div>
+        <div class="tresc">             
+            <b>-Przychodzi baba do lekarza</b><br><br>
+             -a lekarz też baba<br>
+        </div>
+        <div class="pasek2"></div>
+    </div>
 
-<p align="right"> <font color="blue" size="20" face="Arial"> Ulubiony Aktor: Michael Ward </font> </p> <br>
-<p align="middle"> <font color="Grey" size="10" face="Arial"> Ulubiony Zespół Muzyczny: <font color="Red" size="20" face="Arial"> Linkin park  </font> </p> <br>
-<p align="middle"> <font color="green" size="5" face="Arial"> Data urodzenia: 16 lipca 2004.</font> </p> <br>
+    <div class="ramka">
+        <div class="tytul prawa"> Żart o informatyku </div>
+        <div class="tresc">
+            <img src="ZDJECIA ITP/gif1.gif" align="right" border="0" alt="Grafika">             
+            <b>- Co robi informatyk budząc się na kacu?</b><br><br>
+            <b>-Testuje pamięć.</b><br> 
+        </div>
+        <div class="pasek3"></div>
+        <div class="dane">             
+            <div> <b>nazwisko ucznia</b><br><br> Kozłowski </div>
+            <div> <b>imię ucznia</b><br><br> Borys </div> 
+        </div>
+    </div>
 
-<p align="left"> <font color="black" size="5" face="Arial" ><b> H<sub>2</sub>SO<sub>4</sub> </font> </p> 
-<p align="left"> <font color="black" size="5" face="Arial"> x<sup>*</sup>x<c>=x<sup>2</font> </p> 
+    <!-- PIERWSZA RAMKA: SZARA, ZWYKŁY TEKST -->
+    <div class="sekcja-szara">
+        <h3>Poniżej są trzy wyliczenia z różnymi znakami wyliczenia</h3>
+        <h3>Ty zaproponuj swoje, związane z informatyką</h3>
+        <ul>
+            <li><b>Pogrubienie:</b> &lt;b&gt; &lt;/b&gt;</li>
+            <li><b>Kursywa:</b> &lt;i&gt; &lt;/i&gt;</li>
+            <li><b>Podkreślenie:</b> &lt;u&gt; &lt;/u&gt;</li>
+        </ul>
 
-<a name="skok_srodek_kozlowski"></a>
-<A HREF="poczta_kozlowski.html"> Tutaj jest link do poczty </A><br>
-<A HREF="plik_kozlowski.html"> Tutaj jest link do pliku </A><br>
-<A HREF="tabela_kozlowski.html"> Tutaj jest link do tabeli </A><br>
-<A HREF="formularz_kozlowwski.html"> Tutaj jest link do formuarz </A><br>
-<a href="#skok_poczatek">kliknij aby skoczyć na początek tekstu</a> <br>
-<a href="#skok_koniec_kozlowski">kliknij aby skoczyć na koniec tekstu</a> <br>
- 
+        <br>
+        <h3>Poniżej są trzy numerowania z różnymi znakami numerowania</h3>
+        <h3>Ty zaproponuj swoje, związane z informatyką</h3>
+        <ol type="I">
+            <li>Nagłówki w treści strony WWW (&lt;h1&gt; do &lt;h6&gt;).</li>
+            <li>Możliwości funkcji font (&lt;font size&gt;, &lt;font color&gt;).</li>
+            <li>Najprostsze rodzaje kolorów (Nazwa, RGB, Hex).</li>
+        </ol>
+    </div>
 
-<H3 ALIGN=left> Nagłówek 1  po lewej</H3> 
+    <!-- DRUGA RAMKA: SZARA, JASKRAWO-NIEBIESKI TEKST -->
+    <div class="sekcja-jaskrawa">
+        <h3>Poniżej będą trzy poziomy numerowania/wyliczenia z różnymi rodzajami numerowania/wyliczenia</h3>
+        <h3>Ty zaproponuj swoje, związane z informatyką</h3>
+        <ol start="2">
+            <li>Popularne interfejsy urządzeń peryferyjnych do komputera:
+                <ol type="A" start="2">
+                    <li>Interfejsy na przesył obrazu:
+                        <ol type="I" start="2">
+                            <li>HDMI
+                                <ul>
+                                    <li>Type A- Standard</li>
+                                    <li>Type B- Dual-Link</li>
+                                    <li>Type C- Mini</li>
+                                    <li>Type D- Micro</li>
+                                    <li>Type E- Zawiera blokującą ochronę aby kabel Typu Standard się nie ruszał</li>
+                                </ul>
+                            </li>
+                            <li>DVI
+                                <ul>
+                                    <li>DVI-I- Przesyła dane cyfrowe i analogowe</li>
+                                    <li>DVI-D- Przesyła dane cyfrowe</li>
+                                    <li>DVI-A- Przesyła dane analogowe</li>
+                                </ul>
+                            </li>
+                            <li>D-SUB
+                                <ul>
+                                    <li>DE-9- Standard</li>
+                                    <li>DE-9M- Standard bez śrub mocujących</li>
+                                    <li>DA-15- Złącze GamePort</li>
+                                    <li>DE-15F- Złącze VGA, SVGA i XGA</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </li>
+                    <li style="list-style-type: none;">
+                        <ol type="A" start="3">
+                            <li>Interfejsy na przesył audio:
+                                <ol type="I" start="2">
+                                    <li>Jack
+                                        <ul>
+                                            <li>Jack 6,3mm</li>
+                                            <li>Jack 3,5mm (minijack)</li>
+                                            <li>Jack 2,5mm (microjack)</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>Interfejsy na przesył danych:
+                                <ol type="I" start="2">
+                                    <li>USB
+                                        <ul>
+                                            <li>Type A (USB 1.0 & 2.0)</li>
+                                            <li>Type B (USB 1.0 & 2.0)</li>
+                                            <li>Mini A (USB 2.0)</li>
+                                            <li>Mini B (USB 2.0)</li>
+                                            <li>Mini AB (USB 2.0)</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>
 
-<fieldset> 
-<legend><font color="green"> Żart o informatyku </legend> 
-<IMG SRC="kac.gif" ALIGN=right BORDER=15 >-Co robi informatyk budząc się na kacu?  <br /> 
--Testuje pamięć.
-</fieldset> 
-<br />
+    <!-- ================= DÓŁ ================= -->
+    <div id="dol"></div>    
+    <div class="katalog-nawigacja">        
+        dół strony<br>
+        <ul>            
+            <li><a href="kozlowski_walidacja.html">Link do walidacji</a></li>             
+            <li><a href="poczta.html">Link do poczty</a></li>            
+            <li><a href="plik.html">Link do ściągania pliku</a></li>                      
+            <li><a href="kozlowski_tabela.html">Link do strony zawierającej tabelę</a></li>            
+            <li><a href="kozlowski_formulaz.html">Link do strony zawierającej formularz</a></li> 	    
+	    <li><a href="#gora">Link początek tekstu</a></li>            
+            <li><a href="#srodek">Link do środka tekstu</a></li>      
+        </ul>    </div>
 
-<fieldset> 
-<legend><font color="cyan"> Żart o kostce lodu </legend> 
-<IMG SRC="giphy.gif" size="2" ALIGN=left BORDER=15 >-Zosiu, co tak długo robisz w kuchni?  <br /> 
-<IMG SRC="kubek.gif" ALIGN=right BORDER=15 > -Wpadła mi kostka lodu do wrzątku i nie mogę jej  znaleźć.                   
-</fieldset> 
-<br />
-
- 
-
-<fieldset> 
-<legend><font color="yellow">Baba u lekarza</legend> 
-<IMG SRC="lekarz.gif" ALIGN=left BORDER=15 > -Przychodzi baba do lekarza   <br /> 
-<IMG SRC="mc.gif" size="2" ALIGN=right BORDER=15 > -a lekarz też baba                    
-</fieldset> 
-<br />
-
-<H2 ALIGN=left><font color="gray"> Poniżej są trzy wyliczenia z różnymi znakami wyliczenia </H2>
-
- 
- <p align="left"> <font color="blue" size="2" face="Arial"> Możliwości znaków specjalnych w html </font> </p> <br>
-
-<UL TYPE=circle>
-	<LI>  € -   "&euro;"
-	<LI>  © -   "&copy;"
-	<LI>   
-</UL> 
-
-
-
-
-<a name="skok_koniec_kozlowski"></a> 
-<A HREF="poczta_kozlowski.html"> Tutaj jest link do poczty </A><br>
-<A HREF="plik_kozlowski.html"> Tutaj jest link do pliku </A><br>
-<A HREF="tabela_kozlowski.html"> Tutaj jest link do tabeli </A><br>
-<A HREF="formularz_kozlowwski.html"> Tutaj jest link do formuarz </A><br>
-<a href="#skok_poczatek">kliknij aby skoczyć na początek tekstu</a> <br>
-<a href="#skok_srodek_kozlowski">kliknij aby skoczyć do srodka tekstu</a> <br>
-
-	</body> 
- 	</html> 
-
-
-
-
-
-
-
-
+</body></html>
